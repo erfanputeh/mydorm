@@ -1,7 +1,7 @@
 <?php
 if(isset($_GET['id'])){
 
-  $query = $db->prepare("DELETE FROM member_dp WHERE id = :id");
+  $query = $db->prepare("DELETE FROM member_dp WHERE member_dp.member_id = :id");
   $result = $query->execute([
     "id" => $_GET['id'],
   ]);
